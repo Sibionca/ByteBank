@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ByteBank
 {
-    internal class Cliente
+    public class Cliente
     {
-        public string titular;
+        public string nome;
         public string cpf;
         public string profissao;
 
