@@ -8,10 +8,18 @@ namespace ByteBank
 {
     public class ContaCorrente
     {
+        private static int TotalDeContasCriadas;
         public Cliente Titular { get; set; }
         public int Agencia { get; set; }
         public int NumeroDaConta { get; set; }
         private double _saldo = 100;
+
+        public ContaCorrente(int agencia, int numero)
+        {
+            Agencia = agencia;
+            NumeroDaConta = numero;
+            TotalDeContasCriadas++;
+        }
 
         public double Saldo
         {

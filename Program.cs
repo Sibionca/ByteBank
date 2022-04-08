@@ -28,11 +28,9 @@ namespace AprendendoCSharp
 
             //criando uma nova conta do tipo ContaCorrente, que é nossa classe
 
-            ContaCorrente contaDaGabriela = new ContaCorrente();
+            ContaCorrente contaDaGabriela = new ContaCorrente(863, 863452);
 
             contaDaGabriela.Titular =  gabriela;
-            contaDaGabriela.Agencia = 863;
-            contaDaGabriela.NumeroDaConta = 863452;
             contaDaGabriela.Saldo = 5000.00;
 
             //outra forma de ser feito a conta utilizando o cliente é:
@@ -49,11 +47,9 @@ namespace AprendendoCSharp
 
             //nova conta com funcionalidade de saque e deposito
 
-            ContaCorrente contaDoBruno = new ContaCorrente();
+            ContaCorrente contaDoBruno = new ContaCorrente(863, 863453);
 
             contaDoBruno.Titular = bruno;
-            contaDoBruno.Agencia = 863;
-            contaDoBruno.NumeroDaConta = 863453;
             contaDoBruno.Saldo = 200.00;
 
 
