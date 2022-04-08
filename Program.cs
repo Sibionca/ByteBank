@@ -16,52 +16,57 @@ namespace AprendendoCSharp
 
             Cliente gabriela = new Cliente();
 
-            gabriela.nome = "Gabriela";
-            gabriela.profissao = "Desenvolvedora C#";
-            gabriela.cpf = "434.562.878-20";
+            gabriela.Nome = "Gabriela";
+            gabriela.Profissao = "Desenvolvedora C#";
+            gabriela.CPF = "434.562.878-20";
 
             Cliente bruno = new Cliente();
 
-            bruno.nome = "Bruno";
-            bruno.profissao = "Desenvolvedor FrontEnd";
-            bruno.cpf = "128.194.167-25";
+            bruno.Nome = "Bruno";
+            bruno.Profissao = "Desenvolvedor FrontEnd";
+            bruno.CPF = "128.194.167-25";
 
             //criando uma nova conta do tipo ContaCorrente, que é nossa classe
 
             ContaCorrente contaDaGabriela = new ContaCorrente();
 
-            contaDaGabriela.titular =  gabriela;
-            contaDaGabriela.agencia = 863;
-            contaDaGabriela.numero = 863452;
-            contaDaGabriela.saldo = 5000.00;
+            contaDaGabriela.Titular =  gabriela;
+            contaDaGabriela.Agencia = 863;
+            contaDaGabriela.NumeroDaConta = 863452;
+            contaDaGabriela.Saldo = 5000.00;
+
+            //outra forma de ser feito a conta utilizando o cliente é:
+            //contaDaGabriela.titular = new Cliente();
+            //contaDaGabriela.titular.nome = "Gabriela"; e etc...
+            
 
 
-            Console.WriteLine("Titular da Conta: " + contaDaGabriela.titular.nome);
-            Console.WriteLine("Agência: " + contaDaGabriela.agencia);
-            Console.WriteLine("Número da conta: " + contaDaGabriela.numero);
-            Console.WriteLine("Saldo: " + contaDaGabriela.saldo);
+            Console.WriteLine("Titular da Conta: " + contaDaGabriela.Titular.Nome);
+            Console.WriteLine("Agência: " + contaDaGabriela.Agencia);
+            Console.WriteLine("Número da conta: " + contaDaGabriela.NumeroDaConta);
+            Console.WriteLine("Saldo: " + contaDaGabriela.Saldo);
             Console.WriteLine("---------------------------------------------------------" + "\n");
 
             //nova conta com funcionalidade de saque e deposito
 
             ContaCorrente contaDoBruno = new ContaCorrente();
 
-            contaDoBruno.titular = bruno;
-            contaDoBruno.agencia = 863;
-            contaDoBruno.numero = 863453;
-            contaDoBruno.saldo = 75.0;
+            contaDoBruno.Titular = bruno;
+            contaDoBruno.Agencia = 863;
+            contaDoBruno.NumeroDaConta = 863453;
+            contaDoBruno.Saldo = 200.00;
 
 
-            Console.WriteLine("Titular da Conta: " + contaDoBruno.titular.nome);
-            Console.WriteLine("Agência: " + contaDoBruno.agencia);
-            Console.WriteLine("Número da conta: " + contaDoBruno.numero);
-            Console.WriteLine("Saldo: " + contaDoBruno.saldo + "\n");
+            Console.WriteLine("Titular da Conta: " + contaDoBruno.Titular.Nome);
+            Console.WriteLine("Agência: " + contaDoBruno.Agencia);
+            Console.WriteLine("Número da conta: " + contaDoBruno.NumeroDaConta);
+            Console.WriteLine("Saldo: " + contaDoBruno.Saldo + "\n");
             contaDoBruno.Sacar(50);
 
-            Console.WriteLine("após o saque seu saldo é: " + contaDoBruno.saldo);
+            Console.WriteLine("após o saque seu saldo é: " + contaDoBruno.Saldo);
 
             contaDoBruno.Depositar(500);
-            Console.WriteLine("após o deposito seu saldo é: " + contaDoBruno.saldo);
+            Console.WriteLine("após o deposito seu saldo é: " + contaDoBruno.Saldo);
 
             //Transferências
 
@@ -69,8 +74,8 @@ namespace AprendendoCSharp
 
             contaDoBruno.Transferir(200, contaDaGabriela);
 
-            Console.WriteLine(contaDoBruno.titular.nome + ", após a transferência seu saldo é: " + contaDoBruno.saldo);
-            Console.WriteLine(contaDaGabriela.titular.nome +", você recebeu uma transferência, seu saldo é: " + contaDaGabriela.saldo);
+            Console.WriteLine(contaDoBruno.Titular.Nome + ", após a transferência seu saldo é: " + contaDoBruno.Saldo);
+            Console.WriteLine(contaDaGabriela.Titular.Nome + ", você recebeu uma transferência, seu saldo é: " + contaDaGabriela.Saldo);
 
 
 
